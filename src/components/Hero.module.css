@@ -1,0 +1,115 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1510076857177-7470076d20f3?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+  filter: sepia(0.4) brightness(0.9);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(250,243,224,0.4), rgba(250,243,224,0.8));
+  z-index: 1;
+}
+
+.heroContent {
+  text-align: center;
+  z-index: 10;
+  padding: 3rem;
+  border: 1px solid var(--champagne-gold);
+  background: rgba(253, 251, 247, 0.8);
+  position: relative;
+  max-width: 800px;
+}
+
+.heroContent::before {
+  content: '';
+  position: absolute;
+  top: 8px; left: 8px; right: 8px; bottom: 8px;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  pointer-events: none;
+}
+
+.heroSubtitle {
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 1rem;
+  color: var(--forest-green);
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 6.5rem;
+  line-height: 1.1;
+  color: var(--forest-green);
+  margin: 1rem 0;
+}
+
+.amp {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  color: var(--champagne-gold);
+  font-weight: 300;
+  display: inline-block;
+  transform: translateY(-10px);
+}
+
+.heroDate {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  margin-top: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+.scrollIndicator span {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  color: var(--forest-green);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--forest-green), transparent);
+  animation: scrollLine 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: top;
+}
+
+@keyframes scrollLine {
+  0%   { transform: scaleY(0); opacity: 0; }
+  50%  { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .heroTitle { font-size: 3.5rem; }
+  .amp { font-size: 3rem; }
+}

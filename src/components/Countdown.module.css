@@ -1,0 +1,73 @@
+.countdownSection {
+  background-color: var(--cream-dark);
+  border-top: 1px solid var(--champagne-light);
+  border-bottom: 1px solid var(--champagne-light);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.countdownLabel {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+}
+
+.countdownGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.unitWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.cSep {
+  font-size: 0.7rem;
+  color: var(--champagne-gold);
+  opacity: 0.6;
+  margin: 0 1rem 1.5rem;
+}
+
+.cUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.cNum {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--forest-green);
+  line-height: 1;
+  display: block;
+}
+
+.cLbl {
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--champagne-gold);
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .countdownGrid { flex-wrap: nowrap; }
+  .cUnit { min-width: 0; flex: 1; }
+  .cNum  { font-size: 2rem; }
+  .cLbl  { font-size: 0.55rem; letter-spacing: 2px; }
+  .cSep  { font-size: 0.6rem; margin: 0 0.4rem 1.5rem; }
+}
+
+@media (max-width: 400px) {
+  .cNum { font-size: 1.6rem; }
+  .cSep { display: none; }
+}

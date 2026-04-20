@@ -1,0 +1,32 @@
+:root {
+  --cream: #FDFBF7;
+  --cream-dark: #F0EAD6;
+  --forest-green: #1B2E22;
+  --forest-green-light: #2D4A38;
+  --champagne-gold: #C5A059;
+  --champagne-light: #E3D3B0;
+  --text-light: #4A5B52;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--cream);
+  color: var(--forest-green);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .serif {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}

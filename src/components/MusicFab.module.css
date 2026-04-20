@@ -1,0 +1,46 @@
+.musicFab {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.5rem;
+  z-index: 800;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--forest-green);
+  border: 1px solid var(--champagne-gold);
+  box-shadow: 0 6px 28px rgba(27, 46, 34, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.musicFab:hover { transform: scale(1.08); }
+
+.musicBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 20px;
+}
+
+.musicBars span {
+  width: 3px;
+  border-radius: 2px;
+  background: var(--champagne-gold);
+  animation: barDance 0.7s ease infinite alternate;
+  display: block;
+}
+
+.musicBars span:nth-child(1) { height: 7px;  animation-delay: 0s; }
+.musicBars span:nth-child(2) { height: 15px; animation-delay: 0.12s; }
+.musicBars span:nth-child(3) { height: 10px; animation-delay: 0.22s; }
+.musicBars span:nth-child(4) { height: 18px; animation-delay: 0.08s; }
+
+.musicBars.paused span { animation-play-state: paused; }
+
+@keyframes barDance {
+  from { transform: scaleY(0.3); }
+  to   { transform: scaleY(1); }
+}

@@ -1,0 +1,98 @@
+/* ── Shared layout helpers ─────────────────────────────── */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.section { padding: 7rem 0; }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  color: var(--forest-green);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.divider {
+  width: 80px;
+  height: 1px;
+  background-color: var(--champagne-gold);
+  margin: 1.5rem auto 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '♦';
+  position: absolute;
+  color: var(--champagne-gold);
+  font-size: 12px;
+  top: -9px;
+  left: -20px;
+}
+
+.divider::after {
+  content: '♦';
+  position: absolute;
+  color: var(--champagne-gold);
+  font-size: 12px;
+  top: -9px;
+  right: -20px;
+}
+
+/* ── Scroll reveal ─────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.fade-up    { transform: translateY(50px); }
+.fade-left  { transform: translateX(-40px); }
+.fade-right { transform: translateX(40px); }
+
+/* ── Confetti ───────────────────────────────────────────── */
+.confetti-piece {
+  position: fixed;
+  top: -12px;
+  pointer-events: none;
+  z-index: 99999;
+  animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
+}
+
+/* ── Floating hearts ───────────────────────────────────── */
+.floating-heart {
+  position: fixed;
+  bottom: -30px;
+  color: #c97b7b;
+  pointer-events: none;
+  z-index: 9998;
+  animation: heartFloat linear forwards;
+}
+
+@keyframes heartFloat {
+  0%   { transform: translateY(0) scale(1); opacity: 1; }
+  50%  { transform: translateY(-50vh) scale(1.1); }
+  100% { transform: translateY(-105vh) scale(0.8); opacity: 0; }
+}
+
+/* ── Responsive section title ──────────────────────────── */
+@media (max-width: 768px) {
+  .section-title { font-size: 2.2rem; }
+}

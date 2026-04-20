@@ -1,0 +1,124 @@
+.gallerySection {
+  background-color: var(--cream);
+}
+
+.slideshow {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.slideshowTrack {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  max-height: 520px;
+  overflow: hidden;
+  border: 1px solid var(--champagne-gold);
+  background: var(--cream-dark);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  pointer-events: none;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.2) contrast(1.05) brightness(0.97);
+}
+
+.slideCaption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.8rem 2rem 1.4rem;
+  background: linear-gradient(to top, rgba(27,46,34,0.72) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.slideTitle {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #fdf6e3;
+  line-height: 1.1;
+}
+
+.slideSub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(227, 211, 176, 0.9);
+}
+
+.slideshowControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.6rem;
+}
+
+.slideBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--champagne-gold);
+  background: transparent;
+  color: var(--forest-green);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.slideBtn:hover {
+  background: var(--forest-green);
+  color: var(--cream);
+}
+
+.slideDots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.slideDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--champagne-light);
+  border: 1px solid var(--champagne-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slideDot.activeDot {
+  background: var(--champagne-gold);
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .slideshowTrack { height: 60vh; max-height: none; }
+  .slideTitle { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .slideshowTrack { height: 50vh; }
+}

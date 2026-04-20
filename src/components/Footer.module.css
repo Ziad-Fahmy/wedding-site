@@ -1,0 +1,54 @@
+.footer {
+  background-color: var(--cream);
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.navLogo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--forest-green);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.amp {
+  color: var(--champagne-gold);
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.7rem;
+  text-transform: none;
+}
+
+.footerDivider {
+  width: 60px;
+  height: 1px;
+  background: var(--champagne-gold);
+  margin: 0.5rem auto;
+  position: relative;
+}
+
+.footerDivider::before {
+  content: '♦';
+  position: absolute;
+  color: var(--champagne-gold);
+  font-size: 10px;
+  top: -7px;
+  left: -16px;
+}
+
+.footerDivider::after {
+  content: '♦';
+  position: absolute;
+  color: var(--champagne-gold);
+  font-size: 10px;
+  top: -7px;
+  right: -16px;
+}
+
+.footerNote {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}

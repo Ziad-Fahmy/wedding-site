@@ -1,0 +1,95 @@
+.detailsSection {
+  background-color: var(--cream-dark);
+  border-top: 1px solid var(--champagne-light);
+  border-bottom: 1px solid var(--champagne-light);
+}
+
+.detailsGrid {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.detailCard {
+  background: var(--cream);
+  padding: 3.5rem 2.5rem;
+  border: 1px solid var(--champagne-gold);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.detailCard::before {
+  content: '';
+  position: absolute;
+  top: 6px; left: 6px; right: 6px; bottom: 6px;
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  pointer-events: none;
+}
+
+.detailCard:hover { transform: translateY(-8px); }
+
+.detailCard h3 {
+  font-size: 2.2rem;
+  color: var(--forest-green);
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.date {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--forest-green);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.time, .location, .address {
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.mapBtn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--champagne-gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--champagne-light);
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.mapBtn:hover {
+  color: var(--forest-green);
+  border-color: var(--forest-green);
+}
+
+.mapContainer {
+  border: 1px solid var(--champagne-gold);
+  padding: 6px;
+  background: var(--cream);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.mapContainer iframe {
+  display: block;
+  width: 100%;
+  filter: sepia(0.6) hue-rotate(330deg) grayscale(0.3) contrast(1.2);
+  opacity: 0.85;
+  transition: all 0.5s ease;
+}
+
+.mapContainer:hover iframe {
+  opacity: 1;
+  filter: sepia(0.4) hue-rotate(330deg) grayscale(0.2) contrast(1.1);
+}
