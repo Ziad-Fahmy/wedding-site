@@ -67,8 +67,4 @@ npm run build
 ```
 
 Output goes into the `dist/` folder — upload that to any static host (Netlify, Vercel, GitHub Pages, etc.).
-# wedding-site
-# wedding-site
-# wedding-site
-# wedding-site
-# wedding-site
+
