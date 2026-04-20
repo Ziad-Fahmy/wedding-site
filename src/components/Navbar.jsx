@@ -40,7 +40,7 @@ export default function Navbar() {
       </div>
       <ul className={styles.navLinks}>
         <li><a href="#home"    onClick={e => handleNavClick(e, 'home')}>Home</a></li>
-        <li><a href="#story"   onClick={e => handleNavClick(e, 'story')}>Our Story</a></li>
+        {/* <li><a href="#story"   onClick={e => handleNavClick(e, 'story')}>Our Story</a></li> */}
         <li><a href="#details" onClick={e => handleNavClick(e, 'details')}>Details</a></li>
         <li><a href="#gallery" onClick={e => handleNavClick(e, 'gallery')}>Gallery</a></li>
         <li><a href="#rsvp"    onClick={e => handleNavClick(e, 'rsvp')} className={styles.btnPrimary}>RSVP</a></li>
